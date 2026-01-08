@@ -65,7 +65,7 @@ export default function Home() {
       <Navbar />
 
       {/* ======= Hero Section ======= */}
-      <section id="hero" className="d-flex align-items-center justify-content-center" style={{ position: 'relative', overflow: 'hidden' }}>
+      <section id="hero" className="d-flex align-items-center justify-content-center" style={{ position: 'relative', overflow: 'hidden', backgroundColor: 'black' }}>
         <video
           autoPlay
           loop
@@ -95,8 +95,8 @@ export default function Home() {
           zIndex: 2
         }}></div>
 
-        <div className="container" data-aos="fade-up" style={{ position: 'relative', zIndex: 3 }}>
-          <div className="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
+        <div className="container" style={{ position: 'relative', zIndex: 3 }}>
+          <div className="row justify-content-center">
             <div className="col-xl-6 col-lg-8">
               <h1>The Best Digital Solutions & Assignment Help in UAE<span>.</span></h1>
               <h2>Your Trusted Partner for Reliable Academic Help, Web Development, and SEO Services in Dubai & Sharjah</h2>
