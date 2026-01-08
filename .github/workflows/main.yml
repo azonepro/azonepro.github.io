@@ -1,4 +1,4 @@
-# Simple workflow for deploying static content to GitHub Pages
+# Robust workflow for deploying static content to GitHub Pages
 name: Deploy static content to Pages
 
 on:
@@ -17,25 +17,41 @@ concurrency:
 
 jobs:
   deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'npm'
+          # Cache removed to avoid failure
+          
       - name: Install dependencies
         run: npm install
+
       - name: Build
         run: npm run build
+
+      - name: Debug Output Directory
+        run: |
+          echo "Listing current directory:"
+          ls -la
+          echo "Listing out directory:"
+          ls -R out || echo "out directory not found"
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: './out'
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
