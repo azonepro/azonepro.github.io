@@ -8,27 +8,40 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://azoneprojects.com"),
   title: {
     template: "%s | Azone Projects",
-    default: "Azone Projects - #1 Assignment Help & Digital Solutions in UAE",
+    default: "Best Assignment Writing & Digital Solutions in UAE | Azone Projects",
   },
-  description: "Azone Projects: Your trusted partner for premium assignment help, expert software development, and results-driven digital marketing in Dubai, Sharjah, Abu Dhabi, Ajman and across the UAE. Elevate your academic and business success today.",
+  description: "Azone Projects: #1 Rated for Assignment Writing Help, Thesis Support, and Graduation Projects in UAE (Dubai, Sharjah, Abu Dhabi). Expert Web Development & SEO Services.",
   keywords: [
-    "assignment help UAE",
-    "assignment help Dubai",
-    "best assignment help Sharjah",
-    "graduation projects help UAE",
-    "web development Dubai",
-    "software development companies UAE",
-    "digital marketing services UAE",
-    "SEO services Dubai",
-    "graphic design Sharjah",
-    "academic consultancy UAE",
-    "3D animation services UAE",
-    "CV writing services Dubai"
+    // English Keywords
+    "Assignment Writing UAE",
+    "Best Assignment Help Dubai",
+    "Thesis Writing Services Sharjah",
+    "Graduation Projects Help UAE",
+    "Essay Writing Services Abu Dhabi",
+    "Academic Writers UAE",
+    "Web Development Dubai",
+    "Software Projects UAE",
+    "Digital Marketing Agency Sharjah",
+    "SEO Services Dubai",
+
+    // Arabic Keywords via Transliteration/Translation context
+    "مساعدة في الواجبات", // Assignment Help
+    "كتابة رسائل علمية", // Thesis Writing
+    "مشاريع تخرج", // Graduation Projects
+    "خدمات طلابية الامارات", // Student Services UAE
+    "تصميم مواقع دبي", // Web Design Dubai
+    "تسويق الكتروني", // Digital Marketing
+    "حل واجبات جامعية", // University Assignment Help
+    "اعداد بحوث الامارات" // Research Preparation UAE
   ],
   authors: [{ name: "Azone Projects" }],
+  icons: {
+    icon: '/assets/img/favicon.png',
+    apple: '/assets/img/favicon.png',
+  },
   openGraph: {
-    title: "Azone Projects - Premium Academic & Digital Solutions in UAE",
-    description: "Empowering your journey with top-tier assignment help and innovative digital solutions. Trusted by thousands in Dubai, Sharjah, and Abu Dhabi.",
+    title: "Azone Projects - Best Assignment Help & Digital Solutions in UAE",
+    description: "Get premium help with Assignments, Thesis, and Graduation Projects in UAE. Top-rated Web Development & Digital Marketing agency in Dubai & Sharjah.",
     url: "https://azoneprojects.com",
     siteName: "Azone Projects",
     images: [
@@ -44,8 +57,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Azone Projects - UAE's Top Academic & Digital Partner",
-    description: "Premium assignment help and creative digital solutions in the UAE. Serving Dubai, Sharjah, and beyond.",
+    title: "Azone Projects - Top Assignment Help & Tech Solutions UAE",
+    description: "Expert Assignment Writing, Thesis Help, and Custom Software Solutions in UAE. Contact us today!",
     images: ["/assets/img/Azok.png"],
   },
   alternates: {
@@ -59,7 +72,7 @@ const jsonLd = {
   "name": "Azone Projects",
   "url": "https://azoneprojects.com",
   "logo": "https://azoneprojects.com/assets/img/Azok.png",
-  "description": "Leading IT & Educational Consultancy in the UAE, providing premium assignment help, web development, and digital marketing services.",
+  "description": "Leading Educational Consultancy & IT Solutions Provider in UAE. Specializing in Assignment Help, Thesis Writing, Web Development, and Digital Marketing.",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Sharjah",
@@ -71,7 +84,7 @@ const jsonLd = {
     "telephone": "+971-55-623-0065",
     "contactType": "customer service",
     "areaServed": "AE",
-    "availableLanguage": ["en", "Arabic"]
+    "availableLanguage": ["en", "ar"]
   },
   "sameAs": [
     "https://www.facebook.com/azoneprojects",
@@ -110,8 +123,9 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        <Script src="https://www.googletagmanager.com/gtag/js?id=G-4STZXLZXEZ" strategy="afterInteractive" />
-        <Script id="google-analytics" strategy="afterInteractive">
+        {/* Analytics - loaded lazily to improve initial load */}
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-4STZXLZXEZ" strategy="lazyOnload" />
+        <Script id="google-analytics" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
@@ -120,12 +134,13 @@ export default function RootLayout({
           `}
         </Script>
 
-        <Script src="/assets/vendor/purecounter/purecounter_vanilla.js" strategy="afterInteractive" />
-        <Script src="/assets/vendor/aos/aos.js" strategy="afterInteractive" />
-        <Script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js" strategy="afterInteractive" />
-        <Script src="/assets/vendor/glightbox/js/glightbox.min.js" strategy="afterInteractive" />
-        <Script src="/assets/vendor/isotope-layout/isotope.pkgd.min.js" strategy="afterInteractive" />
-        <Script src="/assets/vendor/swiper/swiper-bundle.min.js" strategy="afterInteractive" />
+        {/* Third Party Libs - Defer loading */}
+        <Script src="/assets/vendor/purecounter/purecounter_vanilla.js" strategy="lazyOnload" />
+        <Script src="/assets/vendor/aos/aos.js" strategy="lazyOnload" />
+        <Script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js" strategy="lazyOnload" />
+        <Script src="/assets/vendor/glightbox/js/glightbox.min.js" strategy="lazyOnload" />
+        <Script src="/assets/vendor/isotope-layout/isotope.pkgd.min.js" strategy="lazyOnload" />
+        <Script src="/assets/vendor/swiper/swiper-bundle.min.js" strategy="lazyOnload" />
         <Script src="/assets/js/main.js" strategy="lazyOnload" />
 
         <Script id="google-translate-init" strategy="lazyOnload">
