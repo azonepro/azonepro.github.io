@@ -65,7 +65,7 @@ export default function Home() {
       <Navbar />
 
       {/* ======= Hero Section ======= */}
-      <section id="hero" className="d-flex align-items-center justify-content-center" style={{ position: 'relative', overflow: 'hidden', backgroundColor: 'black' }}>
+      <section id="hero" className="d-flex justify-content-center" style={{ position: 'relative', overflow: 'hidden', backgroundColor: 'black', paddingTop: '150px', alignItems: 'flex-start' }}>
         <video
           autoPlay
           loop
