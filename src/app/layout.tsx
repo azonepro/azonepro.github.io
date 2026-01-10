@@ -91,11 +91,67 @@ const jsonLd = {
     "contactType": "customer service",
     "areaServed": "AE",
     "availableLanguage": ["en", "ar"]
+  }
+};
+
+const serviceJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Assignment Writing Services",
+  "provider": {
+    "@type": "Organization",
+    "name": "Azone Projects",
+    "url": "https://azoneprojects.com"
   },
-  "sameAs": [
-    "https://www.facebook.com/azoneprojects",
-    "https://www.instagram.com/azoneprojects"
-  ]
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Dubai"
+    },
+    {
+      "@type": "City",
+      "name": "Sharjah"
+    },
+    {
+      "@type": "City",
+      "name": "Abu Dhabi"
+    },
+    {
+      "@type": "Country",
+      "name": "United Arab Emirates"
+    }
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Academic Writing Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Thesis Writing Help"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "MBA Assignment Help"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Graduation Projects Support"
+        }
+      }
+    ]
+  },
+  "audience": {
+    "@type": "Audience",
+    "audienceType": "University Students"
+  }
 };
 
 export default function RootLayout({
@@ -128,6 +184,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
         />
         {/* Analytics - loaded lazily to improve initial load */}
         <Script src="https://www.googletagmanager.com/gtag/js?id=G-4STZXLZXEZ" strategy="lazyOnload" />
