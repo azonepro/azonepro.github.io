@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Script from 'next/script';
+import Image from 'next/image';
 
 export const metadata: Metadata = {
     title: 'Expert Assignment Help & Graduation Projects in UAE | Dubai, Sharjah, Abu Dhabi',
@@ -115,13 +116,13 @@ export default function AssignmentHelp() {
                                 <div className="portfolio-details-slider swiper">
                                     <div className="swiper-wrapper align-items-center">
                                         <div className="swiper-slide">
-                                            <img src="/assets/img/portfolio/assignments.jpg" alt="Best Assignment Help in Dubai" />
+                                            <Image src="/assets/img/portfolio/assignments.jpg" width={800} height={600} className="img-fluid" alt="Best Assignment Help in Dubai" />
                                         </div>
                                         <div className="swiper-slide">
-                                            <img src="/assets/img/portfolio/projects.jpg" alt="Thesis Writing Services UAE" />
+                                            <Image src="/assets/img/portfolio/projects.jpg" width={800} height={600} className="img-fluid" alt="Thesis Writing Services UAE" />
                                         </div>
                                         <div className="swiper-slide">
-                                            <img src="/assets/img/portfolio/capstone.jpg" alt="Capstone Project Helpers" />
+                                            <Image src="/assets/img/portfolio/capstone.jpg" width={800} height={600} className="img-fluid" alt="Capstone Project Helpers" />
                                         </div>
                                     </div>
                                     <div className="swiper-pagination"></div>

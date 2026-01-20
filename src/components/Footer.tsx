@@ -10,6 +10,7 @@ export default function Footer() {
                             <div className="footer-info">
                                 <h3>AZONE PROJECTS<span>.</span></h3>
                                 <p>
+                                    <strong>Best Assignment Help & Digital Solutions in Dubai, Sharjah</strong><br />
                                     SPC, Al Zahia Area, Sheikh Mohammed Bin Zayed Rd, Sharjah, United Arab Emirates<br /><br />
                                     <strong>Phone:</strong> +971 55 623 0065<br />
                                     <strong>Email:</strong> projects.azone@gmail.com<br />
