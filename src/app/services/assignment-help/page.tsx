@@ -5,7 +5,10 @@ import Footer from '@/components/Footer';
 export const metadata: Metadata = {
     title: 'Expert Assignment Help & Graduation Projects in UAE',
     description: 'Struggling with assignments? Azone Projects offers the best assignment help, capstone project guidance, and graduation project support in Dubai, Sharjah, and Abu Dhabi. 100% original & high-quality academic support.',
-    keywords: 'assignment help UAE, graduation projects help Dubai, academic support Sharjah, capstone project help, CV writing services UAE, university assignment help UAE',
+    keywords: 'assignment help Dubai, assignment writing services UAE, thesis help Sharjah, project assistance Abu Dhabi, essay writing UAE',
+    alternates: {
+        canonical: '/services/assignment-help',
+    },
 };
 
 export default function AssignmentHelp() {

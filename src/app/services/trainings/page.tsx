@@ -6,6 +6,9 @@ export const metadata: Metadata = {
     title: 'Academic Online Training & Programming Courses UAE | Dubai',
     description: 'Advance your career with Azone Projects. We offer professional online training in programming, web design, and academic success across Sharjah and Dubai.',
     keywords: 'academic training UAE, online programming courses Dubai, web design training Sharjah, university courses UAE, professional tutoring Dubai',
+    alternates: {
+        canonical: '/services/trainings',
+    },
 };
 
 export default function Trainings() {

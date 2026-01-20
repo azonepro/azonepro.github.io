@@ -61,9 +61,7 @@ export const metadata: Metadata = {
     description: "Expert Assignment Writing, Thesis Help, and Custom Software Solutions in UAE. Contact us today!",
     images: ["/assets/img/Azok.png"],
   },
-  alternates: {
-    canonical: "https://azoneprojects.com",
-  },
+
 };
 
 const jsonLd = {

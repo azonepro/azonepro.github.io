@@ -6,6 +6,9 @@ export const metadata: Metadata = {
     title: 'Custom Web & Software Development Services in Dubai',
     description: 'Build your next digital product with Azone Projects. We offer premium web development, custom software solutions, and mobile app development tailored for Sharjah and UAE businesses.',
     keywords: 'web development Dubai, custom software UAE, mobile app development Sharjah, e-commerce solutions UAE, software house Dubai, web design Sharjah',
+    alternates: {
+        canonical: '/services/web-software',
+    },
 };
 
 export default function WebSoftware() {

@@ -6,6 +6,9 @@ export const metadata: Metadata = {
     title: 'SEO Content Writing & Blogging Services UAE | Dubai & Sharjah',
     description: 'Get high-quality, SEO-optimized content from Azone Projects. We provide professional blogging, website copywriting, and article writing services in the UAE.',
     keywords: 'content writing services Dubai, blog writing UAE, SEO copywriting Sharjah, website content writer UAE, article writing Dubai, professional writers UAE',
+    alternates: {
+        canonical: '/services/content-writing',
+    },
 };
 
 export default function ContentWriting() {

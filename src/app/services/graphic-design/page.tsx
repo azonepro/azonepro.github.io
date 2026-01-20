@@ -6,6 +6,9 @@ export const metadata: Metadata = {
     title: '3D Animation & Graphic Design Services Dubai | Azone Projects',
     description: 'Premium graphic design and 3D animation in Sharjah and Dubai. We specialize in logo design, motion graphics, and UI/UX for brands across the United Arab Emirates.',
     keywords: '3D animation services Dubai, graphic design Sharjah, logo design UAE, motion graphics Dubai, UI/UX agency Sharjah, creative design Dubai',
+    alternates: {
+        canonical: '/services/graphic-design',
+    },
 };
 
 export default function GraphicDesign() {

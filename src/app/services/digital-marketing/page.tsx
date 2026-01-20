@@ -6,6 +6,9 @@ export const metadata: Metadata = {
     title: 'Top Digital Marketing & SEO Agency UAE | Grow Your Business',
     description: 'Azone Projects is the leading SEO agency in Dubai and Sharjah. We provide result-oriented digital marketing, PPC, and social media management for UAE businesses.',
     keywords: 'digital marketing agency Dubai, SEO services Sharjah, best SEO expert UAE, social media marketing Dubai, PPC management UAE, online advertising Dubai',
+    alternates: {
+        canonical: '/services/digital-marketing',
+    },
 };
 
 export default function DigitalMarketing() {
