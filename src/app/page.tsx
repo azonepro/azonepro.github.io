@@ -131,7 +131,7 @@ export default function Home() {
             <div className="col-xl-2 col-md-4">
               <div className="icon-box">
                 <i className="ri-calendar-todo-line"></i>
-                <h3><a href="/services/assignment-help">Assignment Help</a></h3>
+                <h3><a href="/services/assignment-help">Assignment Help UAE</a></h3>
               </div>
             </div>
             <div className="col-xl-2 col-md-4">
@@ -259,8 +259,8 @@ export default function Home() {
               <div className="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="200">
                 <div className="icon-box">
                   <div className="icon"><i className="bx bx-book-open"></i></div>
-                  <h4><a href="/services/assignment-help">Assignment Help</a></h4>
-                  <p>Empowering your academic journey with comprehensive assignment and project assistance.</p>
+                  <h4><a href="/services/assignment-help">Assignment Help & Thesis Support</a></h4>
+                  <p>Premium assignment writing, thesis help, and graduation project support for students in Dubai and UAE.</p>
                 </div>
               </div>
               <div className="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="300">
