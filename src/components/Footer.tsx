@@ -1,81 +1,54 @@
-"use client"
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
-    return (
-        <footer id="footer">
-            <div className="footer-top">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-lg-3 col-md-6">
-                            <div className="footer-info">
-                                <h3>AZONE PROJECTS<span>.</span></h3>
-                                <p>
-                                    <strong>Best Assignment Help & Digital Solutions in Dubai, Sharjah</strong><br />
-                                    SPC, Al Zahia Area, Sheikh Mohammed Bin Zayed Rd, Sharjah, United Arab Emirates<br /><br />
-                                    <strong>Phone:</strong> +971 55 623 0065<br />
-                                    <strong>Email:</strong> projects.azone@gmail.com<br />
-                                </p>
-                                <div className="social-links mt-3">
-                                    <a href="https://wa.link/kjwy5b" className="whatsapp"><i className="bx bxl-whatsapp"></i></a>
-                                    <a href="#" className="facebook"><i className="bx bxl-facebook"></i></a>
-                                    <a href="https://instagram.com/azone.projects" className="instagram"><i className="bx bxl-instagram"></i></a>
-                                    <a href="https://www.snapchat.com/add/azoneprojects" className="snapchat"><i className="bx bxl-snapchat"></i></a>
-                                    <a href="#" className="linkedin"><i className="bx bxl-linkedin"></i></a>
-                                    <a href="https://www.tiktok.com/@azoneprojects" className="tiktok"><i className="bx bxl-tiktok"></i></a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="col-lg-2 col-md-6 footer-links">
-                            <h4>Useful Links</h4>
-                            <ul>
-                                <li><i className="bx bx-chevron-right"></i> <a href="/">Home</a></li>
-                                <li><i className="bx bx-chevron-right"></i> <a href="#about">About us</a></li>
-                                <li><i className="bx bx-chevron-right"></i> <a href="#services">Services</a></li>
-                                <li><i className="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-                                <li><i className="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
-                            </ul>
-                        </div>
-
-                        <div className="col-lg-3 col-md-6 footer-links">
-                            <h4>Our Services</h4>
-                            <ul>
-                                <li><i className="bx bx-chevron-right"></i> <a href="/services/web-software">Web & Software Design</a></li>
-                                <li><i className="bx bx-chevron-right"></i> <a href="/services/digital-marketing">Digital Marketing & SEO</a></li>
-                                <li><i className="bx bx-chevron-right"></i> <a href="/services/graphic-design">Graphic Design & Animation</a></li>
-                                <li><i className="bx bx-chevron-right"></i> <a href="/services/content-writing">Blogging & Content Writing</a></li>
-                                <li><i className="bx bx-chevron-right"></i> <a href="/services/assignment-help">Assignment Help</a></li>
-                                <li><i className="bx bx-chevron-right"></i> <a href="/services/trainings">Online Trainings</a></li>
-                            </ul>
-                        </div>
-
-                        <div className="col-lg-4 col-md-6 footer-newsletter">
-                            <h4>Our Newsletter</h4>
-                            <p>Stay connected and informed with our enriching newsletter.</p>
-                            <form action="" method="post">
-                                <input type="email" name="email" className="form-control" style={{ display: 'inline-block', width: 'auto' }} />
-                                <input type="button" value="Subscribe" className="btn btn-primary" style={{ backgroundColor: '#994eef', border: 'none' }} />
-                            </form>
-                            <br />
-                            <div className="social1-links d-flex gap-2">
-                                <a href="https://wa.link/kjwy5b"><img src="/assets/img/whatsappqr.png" style={{ height: '50px', width: '50px' }} alt="WhatsApp" /></a>
-                                <a href="https://www.tiktok.com/@azoneprojects"><img src="/assets/img/tiktokqr.png" style={{ height: '50px', width: '50px' }} alt="TikTok" /></a>
-                                <a href="https://www.snapchat.com/add/azoneprojects"><img src="/assets/img/snapqr.png" style={{ height: '50px', width: '50px' }} alt="Snapchat" /></a>
-                                <a href="https://instagram.com/azone.projects"><img src="/assets/img/insatqr.png" style={{ height: '50px', width: '50px' }} alt="Instagram" /></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div className="container">
-                <div className="copyright">
-                    &copy; Copyright <strong><span>AZONE PROJECTS FZC</span></strong>. All Rights Reserved
-                </div>
-                <div className="credits">
-                    Designed by <a href="#">AZONE PROJECTS FZC</a>
-                </div>
-            </div>
-        </footer>
-    );
+  return (
+    <footer className="w-full bg-surface border-t border-surface-dim pt-2xl pb-lg">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-xl px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto mb-2xl">
+        <div className="col-span-1 md:col-span-1">
+          <div className="font-headline-sm text-headline-sm font-semibold text-primary uppercase tracking-wide mb-lg">
+            AZONE PROJECTS
+          </div>
+          <p className="text-on-surface-variant font-body-sm text-body-sm leading-relaxed pr-md">
+            Empowering the UAE with premium digital solutions and elite academic consulting since 2019. Defined by precision and trust.
+          </p>
+        </div>
+        <div>
+          <h4 className="font-label-md text-label-md text-on-surface mb-lg uppercase tracking-wider">Expertise</h4>
+          <ul className="space-y-sm text-on-surface-variant font-body-sm text-body-sm">
+            <li><Link className="hover:text-primary transition-colors" to="/#services">Web Architecture</Link></li>
+            <li><Link className="hover:text-primary transition-colors" to="/services/essay-writing">Academic Consulting</Link></li>
+            <li><Link className="hover:text-primary transition-colors" to="/#services">Search Strategy</Link></li>
+            <li><Link className="hover:text-primary transition-colors" to="/blog">Our Blog</Link></li>
+          </ul>
+        </div>
+        <div>
+          <h4 className="font-label-md text-label-md text-on-surface mb-lg uppercase tracking-wider">Firm</h4>
+          <ul className="space-y-sm text-on-surface-variant font-body-sm text-body-sm">
+            <li><Link className="hover:text-primary transition-colors" to="/#about">About AZONE</Link></li>
+            <li><Link className="hover:text-primary transition-colors" to="/#portfolio">Case Studies</Link></li>
+            <li><Link className="hover:text-primary transition-colors" to="/pricing">Pricing & Rates</Link></li>
+            <li><Link className="hover:text-primary transition-colors" to="/testimonials">Student Reviews</Link></li>
+            <li><Link className="hover:text-primary transition-colors" to="/#contact">Contact Us</Link></li>
+          </ul>
+        </div>
+        <div>
+          <h4 className="font-label-md text-label-md text-on-surface mb-lg uppercase tracking-wider">Compliance</h4>
+          <ul className="space-y-sm text-on-surface-variant font-body-sm text-body-sm">
+            <li><a className="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+            <li><a className="hover:text-primary transition-colors" href="#">Terms of Engagement</a></li>
+            <li><a className="hover:text-primary transition-colors" href="#">Licensing Details</a></li>
+            <li><Link className="hover:text-primary transition-colors" to="/sitemap">Site Map</Link></li>
+          </ul>
+        </div>
+      </div>
+      <div className="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop pt-lg border-t border-surface-dim flex flex-col md:flex-row justify-between items-center gap-md">
+        <p className="text-on-surface-variant font-body-sm text-body-sm">
+          © 2025 AZONE PROJECTS FZC. All rights reserved.
+        </p>
+        <p className="text-on-surface-variant font-body-sm text-body-sm">
+          Registered in Sharjah Publishing City Freezone, UAE.
+        </p>
+      </div>
+    </footer>
+  );
 }
