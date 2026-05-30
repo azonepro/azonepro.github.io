@@ -1,4 +1,4 @@
-# Robust workflow for deploying static content to GitHub Pages
+# Workflow for deploying Vite + React + TypeScript site to GitHub Pages
 name: Deploy static content to Pages
 
 on:
@@ -29,10 +29,10 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          # Removing cache: 'npm' because package-lock.json might be missing
-          
+          cache: 'npm'
+
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Build
         run: npm run build
@@ -41,8 +41,8 @@ jobs:
         run: |
           echo "Listing current directory:"
           ls -la
-          echo "Listing out directory:"
-          ls -R out || echo "out directory not found"
+          echo "Listing dist directory:"
+          ls -R dist || echo "dist directory not found"
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -50,7 +50,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './out'
+          path: './dist'
 
       - name: Deploy to GitHub Pages
         id: deployment
